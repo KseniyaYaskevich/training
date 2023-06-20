@@ -1,5 +1,24 @@
 'use strict';
 
+const titlesCollection = document.getElementsByTagName('h1');
+const title = titlesCollection[0];
+
+const buttons = document.getElementsByClassName('handler_btn');
+const screenButton = document.querySelector('.screen-btn');
+const percentItems = document.querySelectorAll('.other-items.percent');
+const numberItems = document.querySelectorAll('.other-items.number');
+const rangeInput = document.querySelector('.rollback > div > input');
+const rangeValue = document.querySelector('.rollback > div > span');
+
+const totalInputsCollection = document.getElementsByClassName('total-input');
+let totalInputs = [];
+
+for (let i = 0; i < totalInputsCollection.length; i++) {
+  totalInputs.push(totalInputsCollection[i]);
+}
+
+let screens = document.querySelectorAll('.screen');
+
 const appData = {
   title: '',
   screens: [],
@@ -28,7 +47,6 @@ const appData = {
     return !isNaN(parseFloat(num)) && isFinite(num);
   },
   isString(str) {
-    // добавила удаление всех пробелов для проверки, если придет строка вида '45 45 45';
     return isNaN(str.replace(/\s/g, ''));
   },
   asking() {
