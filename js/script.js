@@ -3,7 +3,10 @@
 const titlesCollection = document.getElementsByTagName('h1');
 const title = titlesCollection[0];
 
-const buttons = document.getElementsByClassName('handler_btn');
+const buttonsCollection = document.getElementsByClassName('handler_btn');
+const buttonStart = buttonsCollection[0];
+const buttonReset = buttonsCollection[1];
+
 const screenButton = document.querySelector('.screen-btn');
 const percentItems = document.querySelectorAll('.other-items.percent');
 const numberItems = document.querySelectorAll('.other-items.number');
@@ -11,11 +14,11 @@ const rangeInput = document.querySelector('.rollback > div > input');
 const rangeValue = document.querySelector('.rollback > div > span');
 
 const totalInputsCollection = document.getElementsByClassName('total-input');
-let totalInputs = [];
-
-for (let i = 0; i < totalInputsCollection.length; i++) {
-  totalInputs.push(totalInputsCollection[i]);
-}
+const totalInput = totalInputsCollection[0];
+const totalCountInput = totalInputsCollection[1];
+const totalCountOtherInput = totalInputsCollection[2];
+const totalFullCountInput = totalInputsCollection[3];
+const totalCountRollbackInput = totalInputsCollection[4];
 
 let screens = document.querySelectorAll('.screen');
 
